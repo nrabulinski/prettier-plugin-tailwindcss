@@ -20,6 +20,7 @@
   "scripts": {
     "_pre": "rimraf dist && cpy 'node_modules/tailwindcss/lib/css/*' dist/css",
     "_esbuild": "node build.mjs",
+    "prepare": "pnpm run build",
     "prebuild": "pnpm run _pre",
     "build": "pnpm run _esbuild -- --minify",
     "postbuild": "tsup src/index.ts",
