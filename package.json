@@ -18,7 +18,7 @@
     "url": "https://github.com/tailwindlabs/prettier-plugin-tailwindcss/issues"
   },
   "scripts": {
-    "_pre": "rimraf dist && cpy 'node_modules/tailwindcss/lib/css/*' dist/css",
+    "_pre": "node pre.mjs",
     "_esbuild": "node build.mjs",
     "prepare": "pnpm run build",
     "prebuild": "pnpm run _pre",
